@@ -1,12 +1,27 @@
-import React from 'react';
-import packageclasses from './Package.module.css';
-import PackageCard from '../UI/PackageCard';
-import { motion } from 'framer-motion';
-import { CgGym } from 'react-icons/cg';
-import { FaCrown } from 'react-icons/fa';
-import { IconContext } from 'react-icons';
-import { BsFillCheckCircleFill } from 'react-icons/bs';
-import Badge from '../Badge/Badge';
+import React from "react";
+import packageclasses from "./Package.module.css";
+import PackageCard from "../UI/PackageCard";
+import { motion } from "framer-motion";
+import { IconContext } from "react-icons";
+import Carousel from "../UI/Carousel";
+
+import baltimore from "../../assets/clients/baltimore-county.webp";
+import bcps from "../../assets/clients/bcps.webp";
+import coastGuard from "../../assets/clients/coast-guard.webp";
+import defense from "../../assets/clients/defense.webp";
+import marineCorps from "../../assets/clients/marine-corps.webp";
+import navalLab from "../../assets/clients/naval-lab.webp";
+import navy from "../../assets/clients/navy.webp";
+import usda from "../../assets/clients/usda.webp";
+import alpha from "../../assets/suppliers/alpha.webp";
+import carrollMotor from "../../assets/suppliers/carroll-motor.webp";
+import ingersoll from "../../assets/suppliers/ingersoll.webp";
+import mightyMax from "../../assets/suppliers/mighty-max.webp";
+import millikenMedical from "../../assets/suppliers/milliken-medical.webp";
+import practicon from "../../assets/suppliers/practicon.webp";
+import ww from "../../assets/suppliers/ww.webp";
+import sba from "../../assets/sba.webp";
+import sbaMaryland from "../../assets/maryland-sba.webp"
 
 const mainTitleAnimation = {
   hidden: { opacity: 0, y: -90 },
@@ -25,7 +40,7 @@ const lineanimate = {
     width: 0,
   },
   visible: {
-    width: '100%',
+    width: "100%",
     transition: {
       ease: [0.2, 0.65, 0.3, 0.9],
       duration: 2,
@@ -55,43 +70,95 @@ const cardreveal = {
     opacity: 1,
     y: 20,
     transition: {
-      type: 'spring',
+      type: "spring",
       stiffness: 200,
     },
   },
 };
 
-const plans = [
-  { name: '4 Clases', price: '28.000 CLP' },
-  { name: '9 Clases', price: '45.000 CLP' },
-  { name: '13 Clases', price: '50.000 CLP' },
-  { name: '17 Clases', price: '55.000 CLP' },
-  { name: '21 Clases', price: '60.000 CLP' },
-  { name: 'Full Clases', price: '65.000 CLP' },
+const clients = [
+  {
+    src: baltimore,
+    alt: "Baltimore County",
+  },
+  {
+    src: bcps,
+    alt: "Baltimore County Public Schools",
+  },
+  {
+    src: coastGuard,
+    alt: "United States Coast Guard",
+  },
+  {
+    src: defense,
+    alt: "Department of Defense",
+  },
+  {
+    src: marineCorps,
+    alt: "United States Marine Corps",
+  },
+  {
+    src: navalLab,
+    alt: "Naval Research Laboratory",
+  },
+  {
+    src: navy,
+    alt: "United States Navy",
+  },
+  {
+    src: usda,
+    alt: "United States Department of Agriculture",
+  },
 ];
 
-const features = [
-  'Clases grupales',
-  'Coach personal',
-  'Horarios flexibles',
-  'Entrenamiento avanzado',
-  'Acceso a equipos',
+
+
+const suppliers = [
+  {
+    src: alpha,
+    alt: "Alpha",
+  },
+  {
+    src: carrollMotor,
+    alt: "Carroll Motor Fuels",
+  },
+  {
+    src: ingersoll,
+    alt: "Ingersoll Rand",
+  },
+  {
+    src: mightyMax,
+    alt: "Mighty Max",
+  },
+  {
+    src: millikenMedical,
+    alt: "Milliken Medical",
+  },
+  {
+    src: practicon,
+    alt: "Practicon",
+  },
+  {
+    src: ww,
+    alt: "WW",
+  },
 ];
+
 
 const Package = () => {
   const PackageCardMotion = motion(PackageCard);
   return (
-    <aside className={packageclasses['package-wrapper']}>
-      <div id="package" className={packageclasses['package-info__div']}>
-        <motion.h3
+    <aside className={packageclasses["package-wrapper"]}>
+      <div id="package" className={packageclasses["package-info__div"]}>
+        <motion.h4
           variants={mainTitleAnimation}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.8 }}
           className={packageclasses.title}
         >
-          Planes que te cambiarán
-        </motion.h3>
+          Our Network of Clients and Suppliers
+        </motion.h4>
         <motion.hr
           variants={lineanimate}
           initial="hidden"
@@ -104,48 +171,47 @@ const Package = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.8 }}
         >
-          En Gorilla Workout, creemos que cada persona tiene un objetivo único y un camino diferente hacia el éxito. Por eso, hemos diseñado planes que se adaptan a tus necesidades, metas y ritmo de vida. ¡Elige tu plan y comienza a transformar tu vida hoy!
+          Our Clients
         </motion.p>
-        <IconContext.Provider value={{ size: '2.5em' }}>
-          <div className={packageclasses['package-card__info']}>
-            {plans.map((plan, index) => (
-              <PackageCardMotion
-                key={index}
-                variants={cardreveal}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.8 }}
-                bgcolor={index % 2 === 0 ? 'dark' : 'light'}
-              >
-                {index === plans.length - 1 ? <FaCrown /> : <CgGym />}
-                <div style={{ marginTop: '1.6em' }}>
-                  <Badge bgcolor={index === plans.length - 1 ? '#FFD700' : '#f35508'}>
-                    {index === plans.length - 1 ? 'Premium' : 'Gold'}
-                  </Badge>
-                  <div className={packageclasses['package-card__cost']}>
-                    <h4>{plan.name}</h4>
-                    <p>{plan.price}</p>
-                  </div>
-                  <ul className={packageclasses['package-card__featurelist']}>
-                    {features.map((feature, idx) => (
-                      <li
-                        key={idx}
-                        className={packageclasses['package-card__featureitem']}
-                      >
-                        <BsFillCheckCircleFill size="1.5rem" />
-                        <p>{feature}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </PackageCardMotion>
-            ))}
-          </div>
-        </IconContext.Provider>
-        <div className={packageclasses['package-footer']}>
-          <p>Valor de una clase: 8.000 CLP</p>
-          <p>Matrícula: 10.000 CLP</p>    
+        <div className={packageclasses["package-card__info"]}>
+          <Carousel 
+            items={clients}
+          /> 
         </div>
+        <motion.p
+          variants={fadeinAnimate}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          Our Suppliers
+        </motion.p>
+        <div className={packageclasses["package-card__info"]}>
+          <Carousel 
+            items={suppliers}
+          /> 
+        </div>
+        <motion.p
+          variants={fadeinAnimate}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          Our Certifications
+        </motion.p>
+        <div className={packageclasses["package-card__info"]}>
+          <img
+            src={sba}
+            alt="Small Business Certification"
+            style={{height:"150px", width:"auto"}}
+          />
+          <img
+            src={sbaMaryland}
+            alt="Small Business Certification"
+            style={{height:"150px", width:"auto"}}
+          />
+        </div>
+
       </div>
     </aside>
   );

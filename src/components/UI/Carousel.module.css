@@ -1,0 +1,36 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.viewport {
+  flex: 1;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.image {
+  max-height: 150px;
+  width: auto;
+  object-fit: contain;
+}
