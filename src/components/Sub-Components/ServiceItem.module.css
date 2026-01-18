@@ -6,11 +6,15 @@
 @media (width < 500px) {
 	.image {
 		width: 90%;
+		object-fit: cover;
+  	object-position: bottom;
 	}
 }
 
 @media (767px < width < 1199px) {
 	.image {
 		width: 100%;
+		object-fit: cover;
+  	object-position: bottom;
 	}
 }

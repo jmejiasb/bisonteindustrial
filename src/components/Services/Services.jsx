@@ -27,8 +27,8 @@ const Services = () => {
 						initial='hidden'
 						whileInView='show'
 						viewport={{once: true, amount: 0.8}}>
-						<p className={serviceclasses['services-title']}>Te ofrecemos</p>
-						<p className={serviceclasses['services-title__italic']}>Los mejores serivios</p>
+						<p className={serviceclasses['services-title']}>Our Products</p>
+						<p className={serviceclasses['services-title__italic']}>And Services</p>
 					</motion.div>
 					<div className={serviceclasses['services-card']}>
 						{servicedata.map(item => (

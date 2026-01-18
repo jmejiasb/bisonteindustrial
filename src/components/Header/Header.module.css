@@ -27,7 +27,7 @@ aside {
 	font-style: italic;
 }
 
-.fitness-image__wrapper {
+.header-image__wrapper {
 	width: 100%;
 	min-height: 88vh;
 	position: relative;
@@ -37,7 +37,7 @@ aside {
 	margin-bottom: 5em;
 }
 
-.fitness-image {
+.header-image {
 	width: 95%;
 	height: 30rem;
 	border-radius: 120px 120px;
@@ -48,7 +48,7 @@ aside {
 	z-index: -1;
 }
 
-.fitness-text__wrapper {
+.header-text__wrapper {
 	width: 80%;
 	height: 20rem;
 	position: absolute;
@@ -61,7 +61,7 @@ aside {
 	z-index: 1;
 }
 
-.fitness-text__wrapper p {
+.header-text__wrapper p {
 	width: 80%;
 	display: inline;
 	justify-content: center;
@@ -92,7 +92,7 @@ aside {
 	-webkit-animation: arrow-animation infinite 1s linear;
 	-o-animation: arrow-animation infinite 1s linear;
 }
-.fitness-text__wrapper {
+.header-text__wrapper {
 	width: 80%;
 	height: 10rem; /* Reduce la altura total del contenedor */
 	position: absolute;
@@ -107,7 +107,7 @@ aside {
 	z-index: -1;
   }
   
-  .fitness-text__wrapper p {
+  .header-text__wrapper p {
 	margin: 0; /* Elimina márgenes adicionales */
 	text-align: center;
 	font-family: 'Poppins', sans-serif;
@@ -206,7 +206,7 @@ aside {
 		z-index: -1;
 	}
 
-	.fitness-image__wrapper {
+	.header-image__wrapper {
 		width: 100%;
 		min-height: 60vh;
 		position: relative;
@@ -215,11 +215,11 @@ aside {
 		align-items: center;
 	}
 
-	.fitness-text__wrapper p {
+	.header-text__wrapper p {
 		margin-bottom: 2.5em !important;
 	}
 
-	.fitness-image {
+	.header-image {
 		width: 90%;
 		height: 13.5rem;
 		border-radius: 100px 100px;
@@ -229,7 +229,7 @@ aside {
 		margin-top: 2.4rem;
 	}
 
-	.fitness-text__wrapper {
+	.header-text__wrapper {
 		width: 90%;
 		height: 10rem;
 		position: absolute;
@@ -240,7 +240,7 @@ aside {
 		z-index: -1;
 	}
 
-	.fitness-text__wrapper p {
+	.header-text__wrapper p {
 		width: 80%;
 		margin-left: 2em;
 		margin-bottom: 2em;
@@ -272,7 +272,7 @@ aside {
 		top: 0;
 	}
 
-	.fitness-image__wrapper {
+	.header-image__wrapper {
 		width: 100%;
 		min-height: 60vh;
 		position: relative;
@@ -281,18 +281,18 @@ aside {
 		align-items: center;
 	}
 
-	.fitness-text__wrapper p {
+	.header-text__wrapper p {
 		margin-bottom: 2.5em !important;
 	}
 
-	.fitness-image {
+	.header-image {
 		width: 90%;
 		height: 13.5rem;
 		border-radius: 100px 100px;
 		margin-top: 2.4rem;
 	}
 
-	.fitness-text__wrapper {
+	.header-text__wrapper {
 		width: 90%;
 		height: 10rem;
 		position: absolute;
@@ -303,7 +303,7 @@ aside {
 		z-index: -1;
 	}
 
-	.fitness-text__wrapper p {
+	.header-text__wrapper p {
 		width: 80%;
 		margin-left: 2em;
 		margin-bottom: 2em;
@@ -335,7 +335,7 @@ aside {
 		top: 5%;
 	}
 
-	.fitness-image__wrapper {
+	.header-image__wrapper {
 		width: 100%;
 		min-height: 60vh;
 		position: relative;
@@ -344,13 +344,13 @@ aside {
 		align-items: center;
 	}
 
-	.fitness-image {
+	.header-image {
 		width: 85%;
 		height: 24rem;
 		margin-top: 2.4rem;
 	}
 
-	.fitness-text__wrapper {
+	.header-text__wrapper {
 		height: 18rem;
 		position: absolute;
 		top: 45%;
@@ -360,7 +360,7 @@ aside {
 		z-index: -1;
 	}
 
-	.fitness-text__wrapper p {
+	.header-text__wrapper p {
 		width: 80%;
 		margin-left: 2em;
 		margin-bottom: 1.5em;
@@ -394,15 +394,15 @@ aside {
 		top: 8%;
 	}
 
-	.fitness-image {
+	.header-image {
 		height: 25rem;
 	}
 
-	.fitness-text__wrapper {
+	.header-text__wrapper {
 		top: 45%;
 	}
 
-	.fitness-text__wrapper p {
+	.header-text__wrapper p {
 		font-size: 2rem;
 		margin-bottom: 1.5em;
 	}

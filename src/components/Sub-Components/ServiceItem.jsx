@@ -8,7 +8,7 @@ const ServiceItem = props => {
 		<ServicesCard bgcolor={props.bgcolor} color={props.color}>
 			<div>
 				<h4 className={servicesitemclasses['services-card__title']}>{props.title}</h4>
-				<Badge bcolor={props.color}>{props.badgetext}</Badge>
+				{/* <Badge bcolor={props.color}>{props.badgetext}</Badge> */}
 			</div>
 			<img className={servicesitemclasses.image} src={props.image} alt={props.imagealt} />
 		</ServicesCard>

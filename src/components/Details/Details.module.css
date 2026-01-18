@@ -1,23 +1,23 @@
-.fitnessdetails-info {
+.details-info {
 	width: 80%;
 	display: flex;
 	flex-direction: column;
 }
 
-.fitnessd-title {
-	font-size: 5rem;
+.details-title {
+	font-size: 4rem;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 200;
 	line-height: 0.6;
 	margin-top: 1em;
 }
 
-.fitnessd-title__italic {
-	font-size: 5rem;
+.details-title__italic {
+	font-size: 3rem;
 	font-family: 'Poppins', sans-serif;
 	font-style: italic;
 	font-weight: 200;
-	margin-bottom: 0.5em;
+	margin-bottom: 0.em;
 }
 
 .whitehr {
@@ -27,7 +27,7 @@
 	opacity: 0.5;
 }
 
-.fitness-featurecard {
+.details-featurecard {
 	/* padding: 2em 2em 2em 0; */
 	margin: 2rem 0;
 	width: 100%;
@@ -37,18 +37,18 @@
 	gap: 10px;
 }
 
-.fitness-featurecard h4 {
+.details-featurecard h4 {
 	font-size: 3.5rem;
 	font-weight: 500;
 }
 
-.fitness-featurecard p {
+.details-featurecard p {
 	font-size: 1.5rem;
 	font-weight: 200;
 	text-transform: uppercase;
 }
 
-.fitnessdetails-img__withinfo {
+.detailsetails-img__withinfo {
 	margin: 3em 0;
 	display: flex;
 	flex-direction: row;
@@ -56,12 +56,12 @@
 	justify-content: space-between;
 }
 
-.fitnessdetails-img__withinfo img {
+.detailsetails-img__withinfo img {
 	height: 40.625rem;
 	border-radius: 50% 50% 50% 48% / 30% 30% 30% 30%;
 }
 
-.fitness-details {
+.details-details {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -70,7 +70,7 @@
 	color: #a6a6a6;
 }
 
-.fitness-details p {
+.details-details p {
 	width: 95%;
 	font-weight: 200;
 	margin-top: 0.5em;
@@ -78,34 +78,34 @@
 
 /* Responsive */
 @media (width < 580px) {
-	.fitnessd-title,
-	.fitnessd-title__italic {
+	.details-title,
+	.details-title__italic {
 		font-size: 2.2rem;
 	}
 
-	.fitness-featurecard {
+	.details-featurecard {
 		grid-template-columns: 1fr;
 	}
 
-	.fitness-featurecard h4 {
+	.details-featurecard h4 {
 		font-size: 2.75rem;
 	}
 
-	.fitness-featurecard p {
+	.details-featurecard p {
 		font-size: 1.25rem;
 	}
 
-	.fitnessdetails-img__withinfo {
+	.detailsetails-img__withinfo {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 
-	.fitnessdetails-img__withinfo img {
+	.detailsetails-img__withinfo img {
 		width: 80%;
 		height: 30%;
 	}
 
-	.fitness-details {
+	.details-details {
 		width: 100%;
 		padding: 0.5em;
 		font-size: 1rem;
@@ -113,33 +113,33 @@
 }
 
 @media (581px < width < 766px) {
-	.fitnessd-title,
-	.fitnessd-title__italic {
+	.details-title,
+	.details-title__italic {
 		font-size: 2.75rem;
 	}
 
-	.fitness-featurecard {
+	.details-featurecard {
 		grid-template-columns: 1fr;
 	}
 
-	.fitness-featurecard h4 {
+	.details-featurecard h4 {
 		font-size: 2.9rem;
 	}
 
-	.fitness-featurecard p {
+	.details-featurecard p {
 		font-size: 1.5rem;
 	}
 
-	.fitnessdetails-img__withinfo {
+	.detailsetails-img__withinfo {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 
-	.fitnessdetails-img__withinfo img {
+	.detailsetails-img__withinfo img {
 		height: 40rem;
 	}
 
-	.fitness-details {
+	.details-details {
 		width: 100%;
 		padding: 0.5em;
 		font-size: 1.35rem;
@@ -147,42 +147,42 @@
 }
 
 @media (767px < width < 1199px) {
-	.fitnessd-title,
-	.fitnessd-title__italic {
+	.details-title,
+	.details-title__italic {
 		font-size: 2.9rem;
 	}
 
-	.fitness-featurecard h4 {
+	.details-featurecard h4 {
 		font-size: 2.9rem;
 	}
 
-	.fitnessdetails-img__withinfo {
+	.detailsetails-img__withinfo {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 
-	.fitness-details {
+	.details-details {
 		padding: 1em;
 		font-size: 1.3rem;
 		color: #a6a6a6;
 	}
 
-	.fitness-details p {
+	.details-details p {
 		width: 100%;
 	}
 }
 
 @media (1200px <= width <= 1398px) {
-	.fitnessdetails-img__withinfo {
+	.detailsetails-img__withinfo {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 
-	.fitnessdetails-img__withinfo img {
+	.detailsetails-img__withinfo img {
 		margin-left: 2em;
 	}
-	.fitness-details {
+	.details-details {
 		padding: 1em;
 		font-size: 1.2rem;
 	}

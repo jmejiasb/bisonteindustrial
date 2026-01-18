@@ -1,10 +1,7 @@
-import React from 'react';
-import Spark from '../../assets/Spark.svg';
-import heroclasses from './Hero.module.css';
+import heroclasses from './Header.module.css';
 import {motion} from 'framer-motion';
 import {PiArrowDownLight} from 'react-icons/pi';
 import {IconContext} from 'react-icons';
-import banner from './banner.jpeg';
 import capitol from "../../assets/capitol-stock.webp"
 
 const titleVariants = {
@@ -56,13 +53,13 @@ const Hero = () => {
 						initial='hidden'
 						whileInView='show'
 						viewport={{once: true, amount: 0.8}}
-						className={heroclasses['fitness-image__wrapper']}>
+						className={heroclasses['header-image__wrapper']}>
 						<img
 							src={capitol}
 							alt='capitol'
-							className={heroclasses['fitness-image']}
+							className={heroclasses['header-image']}
 						/>
-						<div className={heroclasses['fitness-text__wrapper']}>
+						<div className={heroclasses['header-text__wrapper']}>
 							<h1> Bisonte Industrial USA LLC </h1>
 							<p>
 							Your wholesaler supplier for federal, state and local agencies.
