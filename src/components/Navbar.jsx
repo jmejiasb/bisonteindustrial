@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import {useAnimate, stagger} from 'framer-motion';
 import {IconContext} from 'react-icons';
-import {IoFitness} from 'react-icons/io5';
 import {HiMenuAlt4} from 'react-icons/hi';
 import navbarclasses from './Navbar.module.css';
+import bisonteLogo from '../assets/bisonte-logo.webp'
 
 const useMenuAnimation = isMenuOpen => {
 	const [scope, animate] = useAnimate();
@@ -50,15 +50,16 @@ const Navbar = () => {
 				<article>
 					<header>
 						<div className={navbarclasses.logo}>
-							<IoFitness />
-							<p className={navbarclasses.logo__title}>Gorilla Workout</p>
+							<img 
+								src={bisonteLogo}
+								alt="Bisonte industrial"
+								style={{height:"45px"}}
+							/> 
+							<p className={navbarclasses.logo__title}>Bisonte Industrial</p>
 						</div>
 						<div style={{cursor: 'pointer'}} onClick={() => setIsMenuOpen(!isMenuOpen)}>
 							<HiMenuAlt4 />
 						</div>
-						<a href='#contact' onClick={linkanchor} className={navbarclasses['btn-join']}>
-							Registrate
-						</a>
 					</header>
 				</article>
 			</IconContext.Provider>
@@ -68,27 +69,27 @@ const Navbar = () => {
 						<li>
 							<a
 								className={navbarclasses['menu-list__listitem']}
+								href='#home'
+								onClick={linkanchor}>
+								Home
+							</a>
+							<a
+								className={navbarclasses['menu-list__listitem']}
 								href='#about-us'
 								onClick={linkanchor}>
-								Nosotros
+								About Us
 							</a>
 							<a
 								className={navbarclasses['menu-list__listitem']}
 								href='#services'
 								onClick={linkanchor}>
-								Servicios
-							</a>
-							<a
-								className={navbarclasses['menu-list__listitem']}
-								href='#package'
-								onClick={linkanchor}>
-								Planes
+								Services
 							</a>
 							<a
 								className={navbarclasses['menu-list__listitem']}
 								href='#contact'
 								onClick={linkanchor}>
-								Contactanos
+								Contact Us
 							</a>
 						</li>
 					</ul>

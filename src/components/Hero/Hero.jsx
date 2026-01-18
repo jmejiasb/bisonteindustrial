@@ -5,6 +5,7 @@ import {motion} from 'framer-motion';
 import {PiArrowDownLight} from 'react-icons/pi';
 import {IconContext} from 'react-icons';
 import banner from './banner.jpeg';
+import capitol from "../../assets/capitol-stock.webp"
 
 const titleVariants = {
 	visible: {
@@ -48,26 +49,6 @@ const Hero = () => {
 
 	return (
 		<aside>
-			<motion.div
-				variants={titleVariants}
-				initial='hidden'
-				animate='visible'
-				className={heroclasses.title}>
-				<motion.img
-					variants={imageAnimation}
-					initial='hidden'
-					whileInView='show'
-					viewport={{once: true, amount: 0.8}}
-					src={Spark}
-					alt='spark'
-					className={heroclasses.element}
-				/>
-				<motion.p variants={titleChildAnimate}>Encuentra tu </motion.p>
-				<motion.p variants={titleChildAnimate} className={heroclasses['title-italic']}>
-				mejor  
-				</motion.p>
-				<motion.p variants={titleChildAnimate}>version</motion.p>
-			</motion.div>
 			<div>
 				<IconContext.Provider value={{size: '4em', color: 'white'}}>
 					<motion.div
@@ -77,15 +58,14 @@ const Hero = () => {
 						viewport={{once: true, amount: 0.8}}
 						className={heroclasses['fitness-image__wrapper']}>
 						<img
-							src={banner}
-							alt='fitness'
+							src={capitol}
+							alt='capitol'
 							className={heroclasses['fitness-image']}
 						/>
-
-
 						<div className={heroclasses['fitness-text__wrapper']}>
+							<h1> Bisonte Industrial USA LLC </h1>
 							<p>
-							Combinando entrenamiento funcional de alta intensidad con una comunidad que te impulsa a dar lo mejor de ti. 
+							Your wholesaler supplier for federal, state and local agencies.
 							</p>
 						</div>
 						<button className={heroclasses['btn-scroll']} onClick={browseDetailsCaller}>
