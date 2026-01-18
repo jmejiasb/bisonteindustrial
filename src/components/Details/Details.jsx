@@ -2,8 +2,7 @@ import Wrapper from "../UI/Wrapper";
 import detailsclasses from "./Details.module.css";
 import BlankCard from "../UI/BlankCard";
 import { motion } from "framer-motion";
-import { useMediaQuery } from "../../hooks/useMediaQuery";
-import sentadilla from "./sentadilla.jpeg";
+// import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const mainTitleAnimation = {
 	hidden: { opacity: 0, y: -90 },
@@ -58,8 +57,8 @@ const featureNumAnimate = {
 	},
 };
 
-const FitnessDetails = () => {
-	const isSmallDevices = useMediaQuery("(350px < width < 766px)");
+const Details = () => {
+	// const isSmallDevices = useMediaQuery("(350px < width < 766px)");
 
 	return (
 		<Wrapper>
@@ -145,4 +144,4 @@ const FitnessDetails = () => {
 	);
 };
 
-export default FitnessDetails;
+export default Details;

@@ -1,9 +1,6 @@
-import React from "react";
 import featureclasses from "./Feature.module.css";
 import FeatureCard from "../UI/Featurecard";
 import { motion } from "framer-motion";
-import { AiOutlineLike } from "react-icons/ai";
-import { BiCheckCircle } from "react-icons/bi";
 import { IconContext } from "react-icons";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
@@ -51,7 +48,7 @@ const cardChildAnimate = {
 	},
 };
 
-const Feature = () => {
+const Feature = ({ data }) => {
 	const isSmall = useMediaQuery("(350px < width < 766px)");
 	const CustomMotionFeatureCard = motion(FeatureCard);
 
@@ -89,7 +86,7 @@ const Feature = () => {
 					viewport={{ once: true, amount: 0.8 }}
 					className={featureclasses.title}
 				>
-					Why choose us?
+					{data?.title}
 				</motion.p>
 				<motion.hr
 					variants={lineanimate}
@@ -109,17 +106,10 @@ const Feature = () => {
 							whileInView="visible"
 							bgcolor="black"
 						>
-							<AiOutlineLike color="#f35508" />
-							<h4>Vast experience as state and federal providers</h4>
+							{data?.items[0].icon}
+							<h4>{data?.items[0]?.title}</h4>
 							<p>
-								We bring extensive experience working with state and federal
-								agencies, with a deep understanding of regulatory requirements,
-								compliance standards, and procurement processes. Our team is
-								accustomed to operating within strict guidelines while
-								maintaining accuracy, transparency, and reliability. This
-								experience allows us to anticipate challenges, reduce risk, and
-								deliver solutions that meet public-sector expectations without
-								delays or surprises.
+								{data?.items[0]?.description}
 							</p>
 						</CustomMotionFeatureCard>
 						<CustomMotionFeatureCard
@@ -127,16 +117,10 @@ const Feature = () => {
 							initial="hidden"
 							whileInView="visible"
 						>
-							<BiCheckCircle />
-							<h4>Right products, best price, on your timeline</h4>
+							{data?.items[1].icon}
+							<h4>{data?.items[1]?.title}</h4>
 							<p>
-								Our goal is to deliver the right products at the most
-								competitive price, aligned precisely with your project timeline.
-								We focus on efficiency at every stage—from sourcing and planning
-								to delivery and support—to ensure cost-effectiveness without
-								compromising quality. By combining strong supplier relationships
-								with disciplined project management, we help you stay on
-								schedule, within budget, and confident in the outcome.
+								{data?.items[1]?.description}
 							</p>
 						</CustomMotionFeatureCard>
 					</motion.div>

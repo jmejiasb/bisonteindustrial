@@ -1,7 +1,6 @@
 import React from 'react';
 import Wrapper from '../UI/Wrapper';
 import contactclasses from './Contact.module.css';
-import FormContact from '../Sub-Components/FormContact';
 import ContactDetails from '../Sub-Components/ContactDetails';
 import {motion} from 'framer-motion';
 
@@ -40,7 +39,7 @@ const Contact = () => {
 					whileInView='visible'
 					viewport={{once: true, amount: 0.8}}
 					className={contactclasses['contactus-title']}>
-					Contactanos
+					Contact Us
 				</motion.p>
 				<motion.div
 					variants={fadeinAnimate}
@@ -48,7 +47,6 @@ const Contact = () => {
 					whileInView='visible'
 					viewport={{once: true, amount: 0.8}}
 					className={contactclasses['contactus-us__div']}>
-					<FormContact />
 					<ContactDetails />
 				</motion.div>
 			</div>
