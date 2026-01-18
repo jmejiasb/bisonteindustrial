@@ -1,94 +1,68 @@
-import {useState, useEffect} from 'react';
-import {useAnimate, stagger} from 'framer-motion';
-import {IconContext} from 'react-icons';
-import {HiMenuAlt4} from 'react-icons/hi';
-import navbarclasses from './Navbar.module.css';
-import bisonteLogo from '../assets/bisonte-logo.webp'
-
-const useMenuAnimation = isMenuOpen => {
-	const [scope, animate] = useAnimate();
-
-	useEffect(() => {
-		const menuAnimations = isMenuOpen
-			? [
-					['nav', {transform: 'translateX(0%)'}, {ease: [0.08, 0.65, 0.53, 0.96], duration: 0.6}],
-					[
-						'li',
-						{transform: 'scale(1)', opacity: 1, filter: 'blur(0px)'},
-						{delay: stagger(0.05), at: '-0.1'},
-					],
-			  ]
-			: [
-					[
-						'li',
-						{transform: 'scale(0.5)', opacity: 0, filter: 'blur(10px)'},
-						{delay: stagger(0.05, {from: 'last'}), at: '-0.1'},
-					],
-					['nav', {transform: 'translateX(-100%)'}, {at: '-0.1'}],
-			  ];
-
-		animate(menuAnimations);
-	}, [isMenuOpen]);
-
-	return scope;
-};
+import { useState } from "react";
+import { IconContext } from "react-icons";
+import { HiMenuAlt4 } from "react-icons/hi";
+import navbarclasses from "./Navbar.module.css";
+import bisonteLogo from "../assets/bisonte-logo.webp";
+import { Link } from "react-router-dom";
+import { useMenuAnimation } from "../hooks/useMenuAnimation";
 
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const scope = useMenuAnimation(isMenuOpen);
 
-	const linkanchor = e => {
-		e.preventDefault();
-		const anchor = e.target.getAttribute('href').substr(1);
-		window.scrollTo(0, document.getElementById(anchor).offsetTop);
-	};
-
 	return (
 		<>
-			<IconContext.Provider value={{size: '3em', className: `${navbarclasses['logo-icon']}`}}>
+			<IconContext.Provider
+				value={{ size: "3em", className: `${navbarclasses["logo-icon"]}` }}
+			>
 				<article>
 					<header>
 						<div className={navbarclasses.logo}>
-							<img 
+							<img
 								src={bisonteLogo}
 								alt="Bisonte industrial"
-								style={{height:"45px"}}
-							/> 
+								style={{ height: "45px" }}
+							/>
 							<p className={navbarclasses.logo__title}>Bisonte Industrial</p>
 						</div>
-						<div style={{cursor: 'pointer'}} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+						<div
+							style={{ cursor: "pointer" }}
+							onClick={() => setIsMenuOpen(!isMenuOpen)}
+						>
 							<HiMenuAlt4 />
 						</div>
 					</header>
 				</article>
 			</IconContext.Provider>
-			<div ref={scope} exit={{height: '0%'}}>
-				<nav className={`${navbarclasses['menu-wrapper']} ${navbarclasses.active}`}>
-					<ul className={navbarclasses['menu-list__container']}>
+			<div ref={scope}>
+				<nav
+					className={`${navbarclasses["menu-wrapper"]} ${navbarclasses.active}`}
+				>
+					<ul className={navbarclasses["menu-list__container"]}>
 						<li>
-							<a
-								className={navbarclasses['menu-list__listitem']}
-								href='#home'
-								onClick={linkanchor}>
+							<Link
+								className={navbarclasses["menu-list__listitem"]}
+								to="/"
+							>
 								Home
-							</a>
-							<a
-								className={navbarclasses['menu-list__listitem']}
-								href='#about-us'
-								onClick={linkanchor}>
+							</Link>
+							<Link
+								className={navbarclasses["menu-list__listitem"]}
+								to="/about-us"
+							>
 								About Us
-							</a>
+							</Link>
 							<a
-								className={navbarclasses['menu-list__listitem']}
-								href='#services'
-								onClick={linkanchor}>
+								className={navbarclasses["menu-list__listitem"]}
+								href="/#services"
+							>
 								Services
 							</a>
 							<a
-								className={navbarclasses['menu-list__listitem']}
-								href='#contact'
-								onClick={linkanchor}>
+								className={navbarclasses["menu-list__listitem"]}
+								href="/#contact"
+							>
 								Contact Us
 							</a>
 						</li>
