@@ -14,6 +14,22 @@ div .image,
 	display: block;
 }
 
+.imageWrapper {
+	width: 100%;
+	height: 15rem;           /* ALTURA ÚNICA PARA TODAS */
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;       /* 👈 TODAS IGUALES */
+	object-position: center;
+	display: block;
+}
+
+
 
 /* Responsive */
 @media (width < 500px) {
@@ -25,5 +41,17 @@ div .image,
 @media (767px < width < 1199px) {
 	.image {
 		height: 220px !important;
+	}
+}
+
+@media (max-width: 500px) {
+	.imageWrapper {
+		height: 200px;
+	}
+}
+
+@media (767px < width < 1199px) {
+	.imageWrapper {
+		height: 220px;
 	}
 }

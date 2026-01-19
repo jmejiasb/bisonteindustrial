@@ -14,7 +14,7 @@ const HomePage = () => {
       <Details />
       <Services />
       <Package />
-      <Contact />
+
     </>
   );
 };

@@ -22,7 +22,7 @@ const Navbar = () => {
 							<img
 								src={bisonteLogo}
 								alt="Bisonte industrial"
-								style={{ height: "45px" }}
+							
 							/>
 							<p className={navbarclasses.logo__title}>Bisonte Industrial</p>
 						</div>

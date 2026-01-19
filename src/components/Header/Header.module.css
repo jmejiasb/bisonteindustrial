@@ -10,6 +10,14 @@ aside {
 	line-height: 1.1;
 	padding: 0.6em 1.5em;
 	position: relative;
+
+	/* Gradiente plateado corporativo */
+	background: var(--gradient-silver);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	text-shadow: var(--text-shadow-medium);
 }
 
 .element {
@@ -17,8 +25,9 @@ aside {
 	right: 28%;
 	top: 6%;
 	z-index: -1;
+	opacity: 0.25;
+	filter: grayscale(100%);
 }
-
 .title p {
 	margin: 0;
 }
@@ -35,6 +44,7 @@ aside {
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 5em;
+	margin-top: 1rem;
 }
 
 .header-image {
@@ -65,15 +75,19 @@ aside {
 	height: 10rem;
 	position: absolute;
 	top: 62.5%;
-	border-radius: 280px 280px;
+	border-radius: 280px;
 
-	color: #f35508;
+	backdrop-filter: blur(8px);
+
+	color: var(--silver-light);
 	padding: 0.5em;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	z-index: -1;
+	z-index: 1;
+
+	box-shadow: var(--shadow-dark-md);
 }
 
 .header-text__wrapper p {
@@ -96,17 +110,17 @@ aside {
 }
 
 .btn-scroll {
-	background-color: #f35508;
-	border: none;
+	background: var(--button-bg);
+	border: 1px solid var(--button-border);
 	border-radius: 50%;
 	padding: 0.7em;
 	position: absolute;
 	bottom: 0;
 	right: 15%;
-	justify-self: end;
 	cursor: pointer;
+	box-shadow: var(--shadow-silver-sm);
+	transition: all 0.3s ease;
 }
-
 .btn-scroll__arrow:hover {
 	animation: arrow-animation infinite 1s ease-out;
 	-moz-animation: arrow-animation infinite 1s linear;

@@ -7,10 +7,20 @@ const ServiceItem = props => {
 	return (
 		<ServicesCard bgcolor={props.bgcolor} color={props.color}>
 			<div>
-				<h4 className={servicesitemclasses['services-card__title']}>{props.title}</h4>
+				<h4 className={servicesitemclasses['services-card__title']}>
+					{props.title}
+				</h4>
 				{/* <Badge bcolor={props.color}>{props.badgetext}</Badge> */}
 			</div>
-			<img className={servicesitemclasses.image} src={props.image} alt={props.imagealt} />
+
+			{/* 👇 CONTENEDOR DE IMAGEN */}
+			<div className={servicesitemclasses.imageWrapper}>
+				<img
+					className={servicesitemclasses.image}
+					src={props.image}
+					alt={props.imagealt}
+				/>
+			</div>
 		</ServicesCard>
 	);
 };

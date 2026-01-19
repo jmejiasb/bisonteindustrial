@@ -1,44 +1,104 @@
+/* ==========================================
+   PROFESSIONAL NAVBAR - SILVER/GRAY COLORS
+   ========================================== */
+
 header {
-	padding: 1em 1.3em;
+	padding: 0.1rem rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	position: relative;
-
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); /* ⭐ CAMBIO: Fondo oscuro */
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3); /* ⭐ CAMBIO: Sombra más oscura */
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid rgba(192, 192, 192, 0.1); /* ⭐ CAMBIO: Border plateado */
+	transition: all 0.3s ease;
+	overflow: visible; 
 }
+
+/* ==========================================
+   LOGO SECTION
+   ========================================== */
 
 .logo {
 	display: flex;
 	flex-direction: row;
-	gap: 0.5em;
+	align-items: center;
+	gap: 1rem;
 	cursor: pointer;
+	transition: transform 0.3s ease;
+	text-decoration: none;
+	margin-top: 20px;
+	margin-bottom: -50px;
+	}
+
+.logo:hover {
+	transform: scale(1.02);
+}
+
+.logo img {
 	
+	width: auto;
+	filter: drop-shadow(0 2px 8px rgba(192, 192, 192, 0.3)); /* ⭐ CAMBIO: Sombra plateada */
+	transition: filter 0.3s ease;
+	height: 10rem !important;
+}
+
+.logo:hover img {
+	filter: drop-shadow(0 4px 12px rgba(192, 192, 192, 0.5)); /* ⭐ CAMBIO: Sombra plateada hover */
 }
 
 .logo__title {
-	font-size: 2rem;
+	font-size: 1.75rem;
 	margin: 0;
-	color:  #F64B0Bff;
+	font-weight: 600;
+	background: linear-gradient(135deg, #ffffff 0%, #c0c0c0 100%); /* ⭐ CAMBIO: Gradiente plateado */
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: -0.02em;
+	line-height: 1;
 }
+
+/* ==========================================
+   MENU ICON
+   ========================================== */
+
+.logo-icon {
+	color: #c0c0c0; /* ⭐ CAMBIO: Color plateado */
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.logo-icon:hover {
+	color: #ffffff; /* ⭐ CAMBIO: Blanco en hover */
+	transform: scale(1.1);
+}
+
+/* ==========================================
+   MOBILE MENU
+   ========================================== */
 
 .btn-join {
 	background-color: transparent;
-	border: 2px solid white;
+	border: 2px solid #c0c0c0; /* ⭐ CAMBIO: Border plateado */
 	font-family: 'Poppins', sans-serif;
 	font-weight: 200;
 	font-size: 1rem;
 	border-radius: 5px;
 	padding: 0.2em 1.5em;
-	color: white;
+	color: #e8e8e8; /* ⭐ CAMBIO: Texto plateado claro */
 	cursor: pointer;
 	transition: all 0.1s ease-out;
 	text-decoration: none;
 }
 
 .btn-join:hover {
-	background-color: white;
+	background-color: #c0c0c0; /* ⭐ CAMBIO: Fondo plateado */
 	border-color: transparent;
-	color: black;
+	color: #1a1a1a; /* ⭐ CAMBIO: Texto oscuro */
 }
 
 .menu-wrapper {
@@ -48,13 +108,15 @@ header {
 .menu-wrapper.active {
 	position: absolute;
 	width: 100%;
-	height: 15rem;
-	background-color: rgb(13, 13, 13);
+	height: 18rem; /* ⭐ AUMENTADO de 15rem a 18rem */
+	background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
 	z-index: 100;
 	padding: 1em;
 	display: flex;
 	justify-content: center;
+	align-items: center; /* ⭐ AGREGADO para centrar verticalmente */
 	transform: translateX(-300%);
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
 }
 
 .menu-list__container {
@@ -74,14 +136,50 @@ header {
 	text-align: center;
 	margin: 0.5em 0;
 	text-decoration: none;
-	color: inherit;
+	color: #c0c0c0; /* ⭐ CAMBIO: Texto plateado */
 	font-size: 1.5rem;
 	font-weight: 200;
 	text-transform: uppercase;
+	transition: all 0.3s ease;
+	padding: 0.5rem 1rem;
+	border-radius: 8px;
 }
 
-/** Responsive **/
-@media (width < 580px) {
+.menu-list__listitem:hover {
+	color: #ffffff; /* ⭐ CAMBIO: Blanco en hover */
+	background: rgba(192, 192, 192, 0.1); /* ⭐ CAMBIO: Fondo plateado sutil */
+	transform: translateX(5px);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 991px) {
+	header {
+		padding: 1rem 1.5rem;
+	}
+
+	.logo img {
+		height: 50px !important;
+	}
+
+	.logo__title {
+		font-size: 1.6rem;
+	}
+}
+
+/* Mobile Large */
+@media (max-width: 766px) {
+	header {
+		padding: 1rem 1.25rem;
+	}
+
+	.logo img {
+		height: 45px !important;
+	}
+
 	.logo__title {
 		font-size: 1.5rem;
 	}
@@ -91,25 +189,68 @@ header {
 	}
 
 	.logo-icon {
-		width: 2rem;
-		height: 2rem;
-	}
-
-	.menu-list__container li {
-		transform: translateX(0);
+		font-size: 2.5rem !important;
 	}
 }
 
-@media (581px < width < 766px) {
+/* Mobile */
+@media (max-width: 580px) {
+	header {
+		padding: 0.875rem 1rem;
+	}
+
+	.logo {
+		gap: 0.75rem;
+	}
+
+	.logo img {
+		height: 40px !important;
+	}
+
 	.logo__title {
-		font-size: 1.65rem;
+		font-size: 1.3rem;
 	}
 
 	.btn-join {
 		display: none;
 	}
+
 	.logo-icon {
-		width: 2rem;
-		height: 2rem;
+		font-size: 2.25rem !important;
+	}
+
+	.menu-list__container li {
+		transform: translateX(0);
+	}
+
+	.menu-list__listitem {
+		font-size: 1.3rem;
+	}
+}
+
+/* Mobile Small */
+@media (max-width: 400px) {
+	header {
+		padding: 0.75rem 0.875rem;
+	}
+
+	.logo {
+		gap: 0.5rem;
+	}
+
+	.logo img {
+		height: 35px !important;
+	}
+
+	.logo__title {
+		font-size: 1.15rem;
+	}
+
+	.logo-icon {
+		font-size: 2rem !important;
+	}
+
+	.menu-list__listitem {
+		font-size: 1.2rem;
 	}
 }

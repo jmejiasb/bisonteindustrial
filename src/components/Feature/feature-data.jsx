@@ -8,7 +8,7 @@ export const featureHome = {
   items: [
     {
       title: "Vast experience as state and federal providers",
-      icon: <AiOutlineLike color="#f35508" />,
+      icon: <AiOutlineLike color="#f8f8f8" />,
       description:
         "We bring extensive experience working with state and federal \
         agencies, with a deep understanding of regulatory requirements, \
