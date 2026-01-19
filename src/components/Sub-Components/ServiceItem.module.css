@@ -7,11 +7,13 @@ div .image,
 .image {
 	width: 100% !important;
 	height: 15rem !important;
-	object-fit: cover !important;
+	object-fit: contain !important;
 	object-position: center !important;
+	background-color: transparent; /* 👈 o elimina la línea */
 	border-radius: 8px;
 	display: block;
 }
+
 
 /* Responsive */
 @media (width < 500px) {
