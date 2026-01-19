@@ -40,38 +40,59 @@ aside {
 .header-image {
 	width: 95%;
 	height: 30rem;
-	border-radius: 120px 120px;
+	border-radius: 40px;
 	border: none;
 	object-fit: cover;
 	object-position: center center;
 	margin-top: 2.8rem;
 	z-index: -1;
+	
+	/* Degradado difuminado abajo */
+	mask-image: linear-gradient(to bottom, 
+		rgba(0,0,0,1) 0%, 
+		rgba(0,0,0,1) 60%, 
+		rgba(0,0,0,0) 100%
+	);
+	-webkit-mask-image: linear-gradient(to bottom, 
+		rgba(0,0,0,1) 0%, 
+		rgba(0,0,0,1) 60%, 
+		rgba(0,0,0,0) 100%
+	);
 }
 
 .header-text__wrapper {
 	width: 80%;
-	height: 20rem;
+	height: 10rem;
 	position: absolute;
-	top: 55%;
+	top: 62.5%;
 	border-radius: 280px 280px;
-	background-color: transparent !important;
-	padding-top: 1em;
+
+	color: #f35508;
+	padding: 0.5em;
 	display: flex;
 	flex-direction: column;
-	z-index: 1;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
 }
 
 .header-text__wrapper p {
-	width: 80%;
-	display: inline;
-	justify-content: center;
+	margin: 0;
+	text-align: center;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
 	font-size: 2rem;
-	line-height: 1.3;
-	margin: 0;
-	margin-left: 3em;
-	margin-bottom: 0.8em;
+	line-height: 1.5;
+}
+
+.header-title {
+	font-size: 3rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.header-subtitle {
+	font-size: 1.5rem;
 }
 
 .btn-scroll {
@@ -92,31 +113,6 @@ aside {
 	-webkit-animation: arrow-animation infinite 1s linear;
 	-o-animation: arrow-animation infinite 1s linear;
 }
-.header-text__wrapper {
-	width: 80%;
-	height: 10rem; /* Reduce la altura total del contenedor */
-	position: absolute;
-	top: 62.5%;
-	border-radius: 280px 280px;
-	background-color: #464646;
-	color:  #f35508;
-	padding: 0.5em; /* Reduce el espacio interno */
-	display: flex;
-	justify-content: center; /* Centra horizontalmente */
-	align-items: center; /* Centra verticalmente */
-	z-index: -1;
-  }
-  
-  .header-text__wrapper p {
-	margin: 0; /* Elimina márgenes adicionales */
-	text-align: center;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 400;
-	font-size: 2rem; /* Ajusta el tamaño del texto */
-	line-height: 1.5;
-  }
-  
-  
 
 @keyframes arrow-animation {
 	0% {
@@ -215,14 +211,10 @@ aside {
 		align-items: center;
 	}
 
-	.header-text__wrapper p {
-		margin-bottom: 2.5em !important;
-	}
-
 	.header-image {
 		width: 90%;
 		height: 13.5rem;
-		border-radius: 100px 100px;
+		border-radius: 30px;
 		border: none;
 		object-fit: cover;
 		object-position: center center;
@@ -281,14 +273,10 @@ aside {
 		align-items: center;
 	}
 
-	.header-text__wrapper p {
-		margin-bottom: 2.5em !important;
-	}
-
 	.header-image {
 		width: 90%;
 		height: 13.5rem;
-		border-radius: 100px 100px;
+		border-radius: 30px;
 		margin-top: 2.4rem;
 	}
 

@@ -2,27 +2,8 @@ import heroclasses from './Header.module.css';
 import {motion} from 'framer-motion';
 import {PiArrowDownLight} from 'react-icons/pi';
 import {IconContext} from 'react-icons';
-import capitol from "../../assets/capitol-stock.webp"
-
-const titleVariants = {
-	visible: {
-		transition: {
-			staggerChildren: 0.8,
-		},
-	},
-};
-
-const titleChildAnimate = {
-	hidden: {y: 70, opacity: 0},
-	visible: {
-		opacity: 1,
-		y: 0,
-		transition: {
-			duration: 2,
-			ease: [0.2, 0.65, 0.3, 0.9],
-		},
-	},
-};
+import capitol from "../../assets/capitol-stock.webp";
+import BlurText from './BlurText'; // Ajusta la ruta según tu estructura
 
 const imageAnimation = {
 	hidden: {opacity: 0, y: 60},
@@ -60,10 +41,20 @@ const Hero = () => {
 							className={heroclasses['header-image']}
 						/>
 						<div className={heroclasses['header-text__wrapper']}>
-							<h1> Bisonte Industrial USA LLC </h1>
-							<p>
-							Your wholesaler supplier for federal, state and local agencies.
-							</p>
+							<BlurText
+								text="Bisonte Industrial USA LLC"
+								delay={150}
+								animateBy="words"
+								direction="top"
+								className={heroclasses['header-title']}
+							/>
+							<BlurText
+								text="Your wholesaler supplier for federal, state and local agencies."
+								delay={100}
+								animateBy="words"
+								direction="top"
+								className={heroclasses['header-subtitle']}
+							/>
 						</div>
 						<button className={heroclasses['btn-scroll']} onClick={browseDetailsCaller}>
 							<PiArrowDownLight className={heroclasses['btn-scroll__arrow']} />
