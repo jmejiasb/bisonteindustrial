@@ -14,7 +14,7 @@ const Navbar = () => {
 	return (
 		<>
 			<IconContext.Provider
-				value={{ size: "3em", className: `${navbarclasses["logo-icon"]}` }}
+				value={{className: `${navbarclasses["logo-icon"]}` }}
 			>
 				<article>
 					<header>
@@ -24,7 +24,7 @@ const Navbar = () => {
 								alt="Bisonte industrial"
 							
 							/>
-							<p className={navbarclasses.logo__title}>Bisonte Industrial</p>
+							<p className={navbarclasses.logo__title}>BISONTE INDUSTRIAL</p>
 						</div>
 						<div
 							style={{ cursor: "pointer" }}

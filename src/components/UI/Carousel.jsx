@@ -10,7 +10,13 @@ const Carousel = ({ items }) => {
 
   return (
     <div className={styles.carousel}>
-      <button onClick={prev} className={styles.arrow}>‹</button>
+      <button 
+        onClick={prev} 
+        className={styles.arrow}
+        aria-label="Anterior"
+      >
+        ‹
+      </button>
 
       <div className={styles.viewport}>
         <div
@@ -27,11 +33,29 @@ const Carousel = ({ items }) => {
             </div>
           ))}
         </div>
+        
+        {/* Indicadores de posición */}
+        <div className={styles.indicators}>
+          {items.map((_, i) => (
+            <button
+              key={i}
+              className={`${styles.indicator} ${i === index ? styles.active : ''}`}
+              onClick={() => {}}
+              aria-label={`Ir a imagen ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
 
-      <button onClick={next} className={styles.arrow}>›</button>
+      <button 
+        onClick={next} 
+        className={styles.arrow}
+        aria-label="Siguiente"
+      >
+        ›
+      </button>
     </div>
   );
 }
 
-export default Carousel
+export default Carousel;
