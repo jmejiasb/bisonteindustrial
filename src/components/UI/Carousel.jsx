@@ -1,15 +1,14 @@
-import { ReactNode } from "react";
 import { useCarousel } from "../../hooks/useCarousel";
 import styles from "./Carousel.module.css";
 
-const Carousel = ({ items }) => {
-  const { index, next, prev } = useCarousel({
+const Carousel = ({ items, size = "medium" }) => {
+  const { index, next, prev, goTo } = useCarousel({
     itemCount: items.length,
     interval: 5000,
   });
 
   return (
-    <div className={styles.carousel}>
+    <div className={`${styles.carousel} ${styles[size]}`}>
       <button 
         onClick={prev} 
         className={styles.arrow}
@@ -25,23 +24,25 @@ const Carousel = ({ items }) => {
         >
           {items.map((item, i) => (
             <div className={styles.slide} key={i}>
-              <img
-                src={item.src}
-                alt={item.alt}
-                className={styles.image}
-              />
+              <div className={styles.imageWrapper}>
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className={styles.image}
+                />
+              </div>
             </div>
           ))}
         </div>
         
-        {/* Indicadores de posición */}
         <div className={styles.indicators}>
           {items.map((_, i) => (
             <button
               key={i}
               className={`${styles.indicator} ${i === index ? styles.active : ''}`}
-              onClick={() => {}}
+              onClick={() => goTo(i)}
               aria-label={`Ir a imagen ${i + 1}`}
+              aria-current={i === index ? 'true' : 'false'}
             />
           ))}
         </div>

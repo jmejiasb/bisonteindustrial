@@ -1,6 +1,7 @@
 import detailsclasses from "./History.module.css";
 import Wrapper from "../UI/Wrapper";
 import { motion } from "framer-motion";
+import ofiImage from "../../assets/ofi.webp";
 
 const mainTitleAnimation = {
 	hidden: { opacity: 0, y: -90 },
@@ -145,10 +146,11 @@ const History = () => {
 							viewport={{ once: true, amount: 0.8 }}
 						>
 							<img
-								src="https://images.pexels.com/photos/5324856/pexels-photo-5324856.jpeg"
-								alt="Bisonte Industrial team at work"
-								className={detailsclasses["feature-image"]}
-							/>
+  src={ofiImage}
+  alt="Bisonte Industrial office"
+  className={detailsclasses["feature-image"]}
+/>
+
 							<p className={detailsclasses["image-caption"]}>
 								Our team delivering excellence to government agencies across the United States
 							</p>
