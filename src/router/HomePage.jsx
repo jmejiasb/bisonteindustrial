@@ -4,7 +4,6 @@ import Details from "../components/Details/Details";
 import { featureHome } from "../components/Feature/feature-data";
 import Services from "../components/Services/Services";
 import Package from "../components/Package/Package";
-import Contact from "../components/Contact/Contact";
 
 const HomePage = () => {
   return (
@@ -14,7 +13,6 @@ const HomePage = () => {
       <Details />
       <Services />
       <Package />
-
     </>
   );
 };

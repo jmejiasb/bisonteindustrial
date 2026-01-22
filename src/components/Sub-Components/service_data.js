@@ -44,20 +44,20 @@ export const services = [
 		id: 5,
 		title: "Chemicals",
 		badgetext: "",
-		backgroundcolor: "#C0D6EA",
+		backgroundcolor: "#D6E8DB",
 		textcolor: "black",
 		imagealt: "Chemicals",
 		imagelink:
-			"https://images.pexels.com/photos/32399133/pexels-photo-32399133.jpeg",
+			"https://images.pexels.com/photos/10490663/pexels-photo-10490663.jpeg",
 	},
-	// {
-	// 	id: 6,
-	// 	title: " Quiropráctico",
-	// 	badgetext: "Convenio para Alumnos",
-	// 	backgroundcolor: "#D6E8DB",
-	// 	textcolor: "black",
-	// 	imagealt: "Zumba Dance fitness",
-	// 	imagelink:
-	// 		"https://images.pexels.com/photos/4090012/pexels-photo-4090012.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-	// },
+	{
+		id: 6,
+		title: "School and Office Supplies",
+		badgetext: "",
+		backgroundcolor: "#C0D6EA",
+		textcolor: "black",
+		imagealt: "Zumba Dance fitness",
+		imagelink:
+			"https://images.pexels.com/photos/5088015/pexels-photo-5088015.jpeg",
+	},
 ];
