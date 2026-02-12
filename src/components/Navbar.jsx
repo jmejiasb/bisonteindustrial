@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { IconContext } from "react-icons";
-import { HiMenuAlt4 } from "react-icons/hi";
+import { HiMap, HiMenuAlt4, HiPhone } from "react-icons/hi";
 import navbarclasses from "./Navbar.module.css";
 import bisonteLogo from "../assets/bisonte-logo.webp";
 import { Link } from "react-router-dom";
@@ -74,8 +74,31 @@ const Navbar = () => {
 								src={bisonteLogo}
 								alt="Bisonte industrial"
 							/>
-							<p className={navbarclasses.logo__title}>BISONTE INDUSTRIAL</p>
+							{/* <p className={navbarclasses.logo__title}>BISONTE INDUSTRIAL</p> */}
 						</div>
+						<div
+							className={`${navbarclasses["menu-info-wrapper"]}`}
+						>
+							<div
+								className={`${navbarclasses["text-container"]}`}
+							>
+								<HiPhone className={`${navbarclasses["icon"]}`}/>
+								<p>+1 410-779-9552</p>
+							</div>
+							<div
+								className={`${navbarclasses["text-container"]}`}
+							>
+								<HiMap className={`${navbarclasses["icon"]}`}/>
+								<p>2452 Druid Hill Avenue, Baltimore, MD</p>
+							</div>
+							
+						</div>
+						{
+							/* <div style={{display:"flex"}}>
+
+						</div> */
+						}
+
 						<nav className={navbarclasses["menu-wrapper"]}>
 							<ul className={navbarclasses["menu-list__container"]}>
 								<li>
