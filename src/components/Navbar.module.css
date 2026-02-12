@@ -264,3 +264,46 @@ header {
 		font-size: 1.2rem;
 	}
 }
+
+@media (min-width: 768px) {
+
+	header {
+		padding: 1rem 2rem;
+	}
+
+	/* Show desktop nav inline */
+	header .menu-wrapper {
+		display: flex;
+		position: static;       /* 🔥 important */
+		height: auto;
+		background: transparent;
+		box-shadow: none;
+		transform: none;
+		padding: 0;
+	}
+
+	header .menu-list__container {
+		justify-content: flex-end;
+	}
+
+	header .menu-list__container li {
+		flex-direction: row;    /* 🔥 horizontal */
+		gap: 2rem;
+		transform: none;
+	}
+
+	header .menu-list__listitem {
+		margin: 0;
+		font-size: 1rem;
+	}
+
+	/* Hide hamburger */
+	header div[style] {
+		display: none;
+	}
+
+	/* Hide mobile animated menu */
+	div > .menu-wrapper {
+		display: none;
+	}
+}

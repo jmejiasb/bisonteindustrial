@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef} from "react";
+import { useEffect, useRef, useState } from "react";
 import { IconContext } from "react-icons";
 import { HiMenuAlt4 } from "react-icons/hi";
 import navbarclasses from "./Navbar.module.css";
@@ -28,6 +28,40 @@ const Navbar = () => {
 		return () => document.removeEventListener("mousedown", handleClickOutside);
 	}, [isMenuOpen]);
 
+	const NavLinks = () => (
+		<>
+			<Link
+				className={navbarclasses["menu-list__listitem"]}
+				to="/"
+				onClick={closeMenu}
+			>
+				Home
+			</Link>
+			<Link
+				className={navbarclasses["menu-list__listitem"]}
+				to="/about-us"
+				onClick={closeMenu}
+			>
+				About Us
+			</Link>
+			{
+				/* <Link
+								className={navbarclasses["menu-list__listitem"]}
+								to="/#services"
+							>
+								Services
+							</Link> */
+			}
+			<Link
+				className={navbarclasses["menu-list__listitem"]}
+				to="/contact"
+				onClick={closeMenu}
+			>
+				Contact Us
+			</Link>
+		</>
+	);
+
 	return (
 		<div ref={navRef}>
 			<IconContext.Provider
@@ -42,6 +76,13 @@ const Navbar = () => {
 							/>
 							<p className={navbarclasses.logo__title}>BISONTE INDUSTRIAL</p>
 						</div>
+						<nav className={navbarclasses["menu-wrapper"]}>
+							<ul className={navbarclasses["menu-list__container"]}>
+								<li>
+									<NavLinks />
+								</li>
+							</ul>
+						</nav>
 						<div
 							style={{ cursor: "pointer" }}
 							onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -53,39 +94,13 @@ const Navbar = () => {
 			</IconContext.Provider>
 			<div ref={scope}>
 				<nav
-					className={`${navbarclasses["menu-wrapper"]} ${navbarclasses.active}`}
+					className={`${navbarclasses["menu-wrapper"]} ${
+						isMenuOpen ? navbarclasses.active : ""
+					}`}
 				>
 					<ul className={navbarclasses["menu-list__container"]}>
 						<li>
-							<Link
-								className={navbarclasses["menu-list__listitem"]}
-								to="/"
-								onClick={closeMenu}
-							>
-								Home
-							</Link>
-							<Link
-								className={navbarclasses["menu-list__listitem"]}
-								to="/about-us"
-								onClick={closeMenu}
-							>
-								About Us
-							</Link>
-							{
-								/* <Link
-								className={navbarclasses["menu-list__listitem"]}
-								to="/#services"
-							>
-								Services
-							</Link> */
-							}
-							<Link
-								className={navbarclasses["menu-list__listitem"]}
-								to="/contact"
-								onClick={closeMenu}
-							>
-								Contact Us
-							</Link>
+							<NavLinks />
 						</li>
 					</ul>
 				</nav>
