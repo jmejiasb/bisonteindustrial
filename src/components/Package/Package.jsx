@@ -1,8 +1,7 @@
 import React from "react";
 import packageclasses from "./Package.module.css";
-import PackageCard from "../UI/PackageCard";
+// import PackageCard from "../UI/PackageCard";
 import { motion } from "framer-motion";
-import { IconContext } from "react-icons";
 import Carousel from "../UI/Carousel";
 
 import baltimore from "../../assets/clients/baltimore-county.webp";
@@ -21,7 +20,7 @@ import millikenMedical from "../../assets/suppliers/milliken-medical.webp";
 import practicon from "../../assets/suppliers/practicon.webp";
 import ww from "../../assets/suppliers/ww.webp";
 import sba from "../../assets/sba.webp";
-import sbaMaryland from "../../assets/maryland-sba.webp"
+import sbaMaryland from "../../assets/maryland-sba.webp";
 
 const mainTitleAnimation = {
   hidden: { opacity: 0, y: -90 },
@@ -61,20 +60,20 @@ const fadeinAnimate = {
   },
 };
 
-const cardreveal = {
-  hidden: {
-    opacity: 0,
-    y: 100,
-  },
-  visible: {
-    opacity: 1,
-    y: 20,
-    transition: {
-      type: "spring",
-      stiffness: 200,
-    },
-  },
-};
+// const cardreveal = {
+//   hidden: {
+//     opacity: 0,
+//     y: 100,
+//   },
+//   visible: {
+//     opacity: 1,
+//     y: 20,
+//     transition: {
+//       type: "spring",
+//       stiffness: 200,
+//     },
+//   },
+// };
 
 const clients = [
   {
@@ -111,8 +110,6 @@ const clients = [
   },
 ];
 
-
-
 const suppliers = [
   {
     src: alpha,
@@ -144,9 +141,8 @@ const suppliers = [
   },
 ];
 
-
 const Package = () => {
-  const PackageCardMotion = motion(PackageCard);
+  // const PackageCardMotion = motion(PackageCard);
   return (
     <aside className={packageclasses["package-wrapper"]}>
       <div id="package" className={packageclasses["package-info__div"]}>
@@ -174,9 +170,9 @@ const Package = () => {
           Our Clients
         </motion.p>
         <div className={packageclasses["package-card__info"]}>
-          <Carousel 
+          <Carousel
             items={clients}
-          /> 
+          />
         </div>
         <motion.p
           variants={fadeinAnimate}
@@ -187,9 +183,9 @@ const Package = () => {
           Our Suppliers
         </motion.p>
         <div className={packageclasses["package-card__info"]}>
-          <Carousel 
+          <Carousel
             items={suppliers}
-          /> 
+          />
         </div>
         <motion.p
           variants={fadeinAnimate}
@@ -203,15 +199,14 @@ const Package = () => {
           <img
             src={sba}
             alt="Small Business Certification"
-            style={{height:"150px", width:"auto"}}
+            style={{ height: "150px", width: "auto" }}
           />
           <img
             src={sbaMaryland}
             alt="Small Business Certification"
-            style={{height:"150px", width:"auto"}}
+            style={{ height: "150px", width: "auto" }}
           />
         </div>
-
       </div>
     </aside>
   );

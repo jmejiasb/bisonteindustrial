@@ -103,6 +103,11 @@ hr {
 		gap: 30px;
 	}
 
+	.package-card__info img {
+		max-width: 10rem;
+		height: auto;
+	}
+
 	.package-card__featureitem p {
 		font-size: 0.8em;
 	}
