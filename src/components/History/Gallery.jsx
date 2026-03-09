@@ -5,6 +5,9 @@ import pic2 from "../../assets/pic2.jpeg";
 import pic3 from "../../assets/pic3.jpeg";
 import pic4 from "../../assets/pic4.jpeg";
 import pic5 from "../../assets/pic5.jpeg";
+import pic6 from "../../assets/pic6.jpeg";
+import pic7 from "../../assets/pic7.jpeg";
+import pic8 from "../../assets/pic8.jpeg";
 import Wrapper from "../UI/Wrapper";
 import classes from "./Gallery.module.css";
 
@@ -14,6 +17,9 @@ const items = [
   { key: "g3", src: pic3, caption: "Quality products, on time", area: "c" },
   { key: "g4", src: pic4, caption: "Our team in action", area: "d" },
   { key: "g5", src: pic5, caption: "Committed to public service", area: "e" },
+  { key: "g6", src: pic6, caption: "National supply operations", area: "f" },
+  { key: "g7", src: pic7, caption: "Logistics and distribution", area: "g" },
+  { key: "g8", src: pic8, caption: "Government contracting expertise", area: "h" },
 ];
 
 const Gallery = () => (
