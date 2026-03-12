@@ -83,13 +83,17 @@ const Navbar = () => {
 								className={`${navbarclasses["text-container"]}`}
 							>
 								<HiPhone className={`${navbarclasses["icon"]}`}/>
-								<p>+1 410-779-9552</p>
+								<p style={{ fontSize: "2.5rem", lineHeight: "1.8" }}>
+  +1 410-779-9552
+</p>
 							</div>
 							<div
 								className={`${navbarclasses["text-container"]}`}
 							>
 								<HiMap className={`${navbarclasses["icon"]}`}/>
-								<p>2452 Druid Hill Avenue, Baltimore, MD</p>
+								<p style={{ fontSize: "2.1rem" }}>
+  2452 Druid Hill Avenue, Baltimore, MD
+</p>
 							</div>
 							
 						</div>

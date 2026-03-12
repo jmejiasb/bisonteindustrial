@@ -17,9 +17,7 @@ const items = [
   { key: "g3", src: pic3, caption: "Quality products, on time", area: "c" },
   { key: "g4", src: pic4, caption: "Our team in action", area: "d" },
   { key: "g5", src: pic5, caption: "Committed to public service", area: "e" },
-  { key: "g6", src: pic6, caption: "National supply operations", area: "f" },
-  { key: "g7", src: pic7, caption: "Logistics and distribution", area: "g" },
-  { key: "g8", src: pic8, caption: "Government contracting expertise", area: "h" },
+
 ];
 
 const Gallery = () => (

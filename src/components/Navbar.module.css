@@ -221,10 +221,11 @@ header {
 	}
 
 	.menu-info-wrapper p {
-		font-size: 0.5rem;
-	}
-
-}
+	font-size: 6rem;
+	font-weight: 500;
+	letter-spacing: 0.03em;
+	color: #e8e8e8;
+}}
 
 /* Mobile */
 @media (max-width: 580px) {
