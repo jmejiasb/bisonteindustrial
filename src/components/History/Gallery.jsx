@@ -37,7 +37,7 @@ const Gallery = () => (
           whileInView={{ width: "100%" }}
           transition={{ ease: [0.2, 0.65, 0.3, 0.9], duration: 2 }}
           viewport={{ once: true, amount: 0.6 }}
-        />
+        />9
       </motion.div>
 
       <div className={classes["photo-grid"]}>

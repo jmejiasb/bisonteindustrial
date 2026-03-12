@@ -3,7 +3,7 @@
    ========================================== */
 
 header {
-	padding: 0.1rem rem;
+	padding: 0.1rem 1rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -163,14 +163,27 @@ header {
 }
 
 .menu-info-wrapper .text-container {
-	display: flex; 
-	align-items: center; 
-	gap: 0.5rem 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	text-align: center;
 }
 
 .menu-info-wrapper .icon {
 	font-size: 1.5rem;
 }
+ .phone {
+  font-size: 2.2rem;
+  line-height: 1.6;
+  color: #e8e8e8;
+}
+
+.address {
+  font-size: 1.8rem;
+  color: #e8e8e8;
+}
+
 
 /* ==========================================
    RESPONSIVE DESIGN
@@ -192,6 +205,9 @@ header {
 	.logo-icon {
 		font-size: 2.5rem;
 	}
+	  .menu-info-wrapper .icon {
+    font-size: 0.5rem;
+  }
 }
 
 /* Mobile Large */
@@ -216,17 +232,23 @@ header {
 		font-size: 2.5rem !important;
 	}
 
-	.menu-info-wrapper .icon {
-		font-size: 0.6rem !important;
-	}
+	  .menu-info-wrapper .icon {
+    font-size: 1.3rem !important;
+  }
+ 
 
-	.menu-info-wrapper p {
-	font-size: 6rem;
-	font-weight: 500;
-	letter-spacing: 0.03em;
-	color: #e8e8e8;
-}}
+  .menu-info-wrapper p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #e8e8e8;
+  }
 
+   .menu-info-wrapper .icon {
+    font-size: 0.5rem;
+  }
+
+}
 /* Mobile */
 @media (max-width: 580px) {
 	header {
@@ -263,6 +285,9 @@ header {
 	.menu-list__listitem {
 		font-size: 1.3rem;
 	}
+	 .menu-info-wrapper .icon {
+    font-size: 0.5rem;
+  }
 }
 
 /* Mobile Small */
@@ -290,6 +315,9 @@ header {
 	.menu-list__listitem {
 		font-size: 1.2rem;
 	}
+	 .menu-info-wrapper .icon {
+    font-size: 0.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -333,4 +361,7 @@ header {
 	div > .menu-wrapper {
 		display: none;
 	}
+	 .menu-info-wrapper .icon {
+    font-size: 0.5rem;
+  }
 }

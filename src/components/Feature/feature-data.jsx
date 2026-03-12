@@ -24,8 +24,8 @@ export const featureHome = {
       icon: <BiCheckCircle />,
       description: "Our goal is to deliver the right products at the most \
         competitive price, aligned precisely with your project timeline. \
-        We focus on efficiency at every stage—from sourcing and planning \
-        to delivery and support—to ensure cost-effectiveness without \
+        We focus on efficiency at every stage, from sourcing and planning \
+        to delivery and support, to ensure cost-effectiveness without \
         compromising quality. By combining strong supplier relationships \
         with disciplined project management, we help you stay on \
         schedule, within budget, and confident in the outcome.",
